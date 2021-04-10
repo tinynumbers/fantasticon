@@ -26,6 +26,8 @@
   "scripts": {
     "test": "jest",
     "build": "rimraf lib && tsc --project ./tsconfig.json",
+    "prepare": "npm run build",
+    "prepack": "npm run build",
     "watch": "npm run build -- --watch",
     "typecheck": "tsc --noEmit --project tsconfig.test.json --noEmit",
     "lint": "prettier --check ."
